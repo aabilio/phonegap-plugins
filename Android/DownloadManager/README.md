@@ -34,7 +34,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 * `notificationTitle:` Message to show on the notification bar while during download (optional)
 * `cancelToast:`: Message on toast where the donwload is canceled (stoped) (optional)
  
-`win` and `fail` are callback functions. `win` will be called when there is a progress in the download. The passed object is:
+`win` and `fail` are callback functions. `win will be called when there is a progress in the download. The passed object is:
 
     {
     	id: "45345"			// id to handle the process
@@ -48,6 +48,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 ## Using the plugin ##
 	
 * Basic: (start a download on a notification bar)
+
     downloadmanager(
 		"start",
 		{
@@ -65,11 +66,13 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 	);
 
 * Check if a donwload is in progress:
+
 	downloadmanager("cancel", {id: "example_id"}, function(res) {
 		alert(res); // true or false
 	}, function() {});
 
 * More:
+
 	downloadmanager(
 		"start",
 		{
