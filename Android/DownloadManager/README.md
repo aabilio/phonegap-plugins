@@ -78,35 +78,36 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 * More:
 * 
 <pre>
-    downloadmanager(
-        "start",
-	{
-	    url: "http://wherever.com/lalalala/.txt",
-	    filePath: "from_myapp",
-	    fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
-	    overwrite: false,
-	    useNotificationBar: true,
-	    startToast: "Starting download...",
-	    endToast: "Download end!",
-	    ticker: "Downloading...",
-	    notificationTitle: "hello.txt",
-	    cancelToast: "Download canceled!"
-        },
-	function(info) {
-	    console.info("id:          "+info.id+"\n" +
-	                 "downloading: "+info.downloading+"\n" +
-			 "total:       "+info.total+"\n" +
-			 "file:        "+info.file+"\n" +
-			 "dir:         "+info.dir+"\n" +
-			 "progress:    "+info.progress+"\n"
-			);
-            // progress bar example:
-	    $('#progress_bar').css('width', info.progress);
-	},
-	function(error) {
-	    alert(error);
-	}
-    );
+   downloadmanager(
+      "start",
+      {
+         url: "http://wherever.com/lalalala/.txt",
+	 filePath: "from_myapp",
+	 fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
+	 overwrite: false,
+	 useNotificationBar: true,
+	 startToast: "Starting download...",
+	 endToast: "Download end!",
+	 ticker: "Downloading...",
+	 notificationTitle: "hello.txt",
+	 cancelToast: "Download canceled!"
+      
+      },
+      function(info) {
+	 console.info("id:          "+info.id+"\n" +
+	              "downloading: "+info.downloading+"\n" +
+	              "total:       "+info.total+"\n" +
+	              "file:        "+info.file+"\n" +
+	              "dir:         "+info.dir+"\n" +
+	              "progress:    "+info.progress+"\n"
+		      );
+         // progress bar example:
+	 $('#progress_bar').css('width', info.progress)
+      },
+         function(error) {
+	 alert(error);
+      }
+);
 </pre>
 
 ## Based on ##
