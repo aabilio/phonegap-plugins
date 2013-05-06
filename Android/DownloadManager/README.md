@@ -7,7 +7,8 @@ The plugin can start and stop a file download from the web (HTTP).
 1. To install the plugin, move DownloadManager.js to your project's www folder and include a reference to it in your html files. 
 2. Create a folder called 'org/apache/cordova/plugins/DownloadManager' within your project's src/ folder.
 3. And copy the .java files into that new folder.
-4. Add the following to res/xml/plugins.xml file `<plugin name="DownloadManager" value="org.apache.cordova.plugins.DownloadManager.DownloadManager" />`
+4. Add the following to res/xml/plugins.xml file `<plugin name="DownloadManager" value="org.apache.cordova.plugins.DownloadManager.DownloadManager" />`.
+5. If you want to use the Android Notification Bar to show the progress, and want icons there, the DownloadManager.java file needs to be edited. About Line 30, you have to import your own R. Of course, you need the icons too. You can use ones from the project (credits for: http://teusink.blogspot.com.es/2013/04/phonegap-android-downloader-plugin.html) and paste the icons on your projec's `res` folder. (You can generate icons here too --> http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-notification.html but if you choose other filename for the icons, you need update the Downloader.java file too. About 136 line, change .setSmallIcon(R.drawable.ic_stat_notification) with your own file name).
 
 ## Using the plugin ##
 
@@ -45,7 +46,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 
 ## Using the plugin ##
 	
-	* Basic: (start a download on a notification bar)
+* Basic: (start a download on a notification bar)
     downloadmanager(
 		"start",
 		{
@@ -62,12 +63,12 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 		}
 	);
 
-	* Check if a donwload is in progress:
+* Check if a donwload is in progress:
 	downloadmanager("cancel", {id: "example_id"}, function(res) {
 		alert(res); // true or false
 	}, function() {});
 
-	* More:
+* More:
 	downloadmanager(
 		"start",
 		{
