@@ -14,10 +14,11 @@ The plugin can start and stop a file download from the web (HTTP).
 
 The plugin creates the method `downloadmanager(action, options, win, fail)`
 
-`action` could be: 
-1. `start` to beging to download a file
-2. `cancel` to stop one
-3. `isdownloading` to know the status of another
+`action` may be: 
+
+* `start` to beging to download a file
+* `cancel` to stop one
+* `isdownloading` to know the status of another
 
 `options` is a json object containing the parameters (some optional) that DownloadManager accepts, it can be:
 
@@ -33,7 +34,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 * `notificationTitle:` Message to show on the notification bar while during download (optional)
 * `cancelToast:`: Message on toast where the donwload is canceled (stoped) (optional)
  
-`win` and `fail` are callback functions. `win` will be called when there is a progress in the download. The passed object is:
+`win` and `fail` are callback functions. `win will be called when there is a progress in the download. The passed object is:
 
     {
     	id: "45345"			// id to handle the process
