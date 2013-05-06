@@ -48,8 +48,9 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 ## Using the plugin ##
 	
 * Basic: (start a download on a notification bar)
-`
-    downloadmanager(
+
+<pre>
+   downloadmanager(
         "start",
 	{
 	    url: url2down,
@@ -64,15 +65,19 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 	    console.error(error);
 	}
     );
-`
+</pre>
+
 * Check if a donwload is in progress:
-`
+
+<pre>
     downloadmanager("cancel", {id: "example_id"}, function(res) {
         alert(res); // true or false
     }, function() {});
-`
+</pre>
+
 * More:
-`
+* 
+<pre>
     downloadmanager(
         "start",
 	{
@@ -102,7 +107,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 	    alert(error);
 	}
     );
-`
+</pre>
 
 ## Based on ##
 
