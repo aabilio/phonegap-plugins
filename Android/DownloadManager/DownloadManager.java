@@ -78,7 +78,7 @@ public class DownloadManager extends CordovaPlugin {
 											"Download canceled!";
 						Boolean useNotificationBar = params.has("useNotificationBar") ?
 													 params.getBoolean("useNotificationBar") : true;
-						String notificationTitle   = params.has("notificationTile") ?
+						String notificationTitle   = params.has("notificationTitle") ?
 													 params.getString("notificationTitle") :
 													 "Downloading: "+fileName;
 						
