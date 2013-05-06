@@ -48,8 +48,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 ## Using the plugin ##
 	
 * Basic: (start a download on a notification bar)
-
-
+<code>
     downloadmanager(
 		"start",
 		{
@@ -65,17 +64,15 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 			console.error(error);
 		}
 	);
-
+</code>
 * Check if a donwload is in progress:
-
-
+<code>
 	downloadmanager("cancel", {id: "example_id"}, function(res) {
 		alert(res); // true or false
 	}, function() {});
-
+</code>
 * More:
-
-
+<code>
 	downloadmanager(
 		"start",
 		{
@@ -105,14 +102,12 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 			alert(error);
 		}
 	);
-
-	
-I will be happy to receive any comment, patch,  bug report or insult!
-
+</code>
 
 ## Based on ##
 
 http://teusink.blogspot.com.es/2013/04/phonegap-android-downloader-plugin.html
+
 http://www.toforge.com/2011/02/phonegap-android-plugin-for-download-files-from-url-on-sd-card/
 
 ## Licence ##
