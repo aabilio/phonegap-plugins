@@ -49,6 +49,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 	
 * Basic: (start a download on a notification bar)
 
+
     downloadmanager(
 		"start",
 		{
@@ -67,11 +68,13 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 
 * Check if a donwload is in progress:
 
+
 	downloadmanager("cancel", {id: "example_id"}, function(res) {
 		alert(res); // true or false
 	}, function() {});
 
 * More:
+
 
 	downloadmanager(
 		"start",
