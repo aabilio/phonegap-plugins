@@ -50,20 +50,20 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 * Basic: (start a download on a notification bar)
 <code>
     downloadmanager(
-		"start",
-		{
-			url: url2down,
-			overwrite: true
-		},
-		function(info) {
-			console.info(info.progress);
-			// Example to stop a download on 30%:
-			downloadmanager("cancel", {id: info.id}, function() {}, function() {});
-		},
-		function(error) {
-			console.error(error);
-		}
-	);
+        "start",
+	{
+	    url: url2down,
+	    overwrite: true
+	},
+	function(info) {
+	    console.info(info.progress);
+            // Example to stop a download on 30%:
+	    downloadmanager("cancel", {id: info.id}, function() {}, function() {});
+	},
+	function(error) {
+	    console.error(error);
+	}
+    );
 </code>
 * Check if a donwload is in progress:
 <code>
