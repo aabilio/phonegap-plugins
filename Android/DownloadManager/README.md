@@ -59,7 +59,8 @@ downloadmanager(
 	function(info) {
     	console.info(info.progress);
         // Example to stop a download on 30%:
-    	downloadmanager("cancel", {id: info.id}, function() {}, function() {});
+        if (info.progress === 30)
+    		downloadmanager("cancel", {id: info.id}, function() {}, function() {});
 	},
 	function(error) {
     	console.error(error);
