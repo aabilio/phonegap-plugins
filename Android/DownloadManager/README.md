@@ -9,7 +9,7 @@ The plugin can start and stop a file download from the web (HTTP).
 3. And copy the .java files into that new folder.
 4. Add the following to res/xml/plugins.xml file `<plugin name="DownloadManager" value="org.apache.cordova.plugins.DownloadManager.DownloadManager" />`
 
-## Using the plugin ## 
+## Using the plugin ##
 
 The plugin creates the method `downloadmanager(action, options, win, fail)`
 
@@ -43,7 +43,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
         progress: 46,     	// In percent
     }
 
-Examples:
+## Using the plugin ##
 	
 	* Basic: (start a download on a notification bar)
     downloadmanager(
