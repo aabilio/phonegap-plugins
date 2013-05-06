@@ -50,63 +50,62 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 * Basic: (start a download on a notification bar)
 
 <pre>
-   downloadmanager(
-        "start",
+downloadmanager(
+	"start",
 	{
-	    url: url2down,
-	    overwrite: true
+		url: url2down,
+    	overwrite: true
 	},
 	function(info) {
-	    console.info(info.progress);
-            // Example to stop a download on 30%:
-	    downloadmanager("cancel", {id: info.id}, function() {}, function() {});
+    	console.info(info.progress);
+        // Example to stop a download on 30%:
+    	downloadmanager("cancel", {id: info.id}, function() {}, function() {});
 	},
 	function(error) {
-	    console.error(error);
+    	console.error(error);
 	}
-    );
+);
 </pre>
 
 * Check if a donwload is in progress:
 
 <pre>
-    downloadmanager("cancel", {id: "example_id"}, function(res) {
-        alert(res); // true or false
-    }, function() {});
+downloadmanager("cancel", {id: "example_id"}, function(res) {
+	alert(res); // true or false
+}, function() {});
 </pre>
 
 * More:
-* 
+
 <pre>
-   downloadmanager(
-      "start",
-      {
-         url: "http://wherever.com/lalalala/.txt",
-	 filePath: "from_myapp",
-	 fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
-	 overwrite: false,
-	 useNotificationBar: true,
-	 startToast: "Starting download...",
-	 endToast: "Download end!",
-	 ticker: "Downloading...",
-	 notificationTitle: "hello.txt",
-	 cancelToast: "Download canceled!"
-      
-      },
-      function(info) {
-	 console.info("id:          "+info.id+"\n" +
-	              "downloading: "+info.downloading+"\n" +
-	              "total:       "+info.total+"\n" +
-	              "file:        "+info.file+"\n" +
-	              "dir:         "+info.dir+"\n" +
-	              "progress:    "+info.progress+"\n"
-		      );
-         // progress bar example:
-	 $('#progress_bar').css('width', info.progress)
-      },
-         function(error) {
-	 alert(error);
-      }
+downloadmanager(
+	"start",
+   	{
+   		url: "http://wherever.com/lalalala/.txt",
+	 	filePath: "from_myapp",
+	 	fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
+	 	overwrite: false,
+	 	useNotificationBar: true,
+	 	startToast: "Starting download...",
+	 	endToast: "Download end!",
+	 	ticker: "Downloading...",
+	 	notificationTitle: "hello.txt",
+	 	cancelToast: "Download canceled!"
+   	},
+  	function(info) {
+		console.info("id:          "+info.id+"\n" +
+	              	 "downloading: "+info.downloading+"\n" +
+	              	 "total:       "+info.total+"\n" +
+	              	 "file:        "+info.file+"\n" +
+	              	 "dir:         "+info.dir+"\n" +
+	              	 "progress:    "+info.progress+"\n"
+		      		);
+     	// progress bar example:
+		$('#progress_bar').css('width', info.progress)
+   	},
+  	function(error) {
+		alert(error);
+  	}
 );
 </pre>
 
