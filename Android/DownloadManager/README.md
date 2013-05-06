@@ -48,7 +48,7 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 ## Using the plugin ##
 	
 * Basic: (start a download on a notification bar)
-<code>
+`
     downloadmanager(
         "start",
 	{
@@ -64,45 +64,45 @@ The plugin creates the method `downloadmanager(action, options, win, fail)`
 	    console.error(error);
 	}
     );
-</code>
+`
 * Check if a donwload is in progress:
-<code>
-	downloadmanager("cancel", {id: "example_id"}, function(res) {
-		alert(res); // true or false
-	}, function() {});
-</code>
+`
+    downloadmanager("cancel", {id: "example_id"}, function(res) {
+        alert(res); // true or false
+    }, function() {});
+`
 * More:
-<code>
-	downloadmanager(
-		"start",
-		{
-			url: "http://wherever.com/lalalala/.txt",
-			filePath: "from_myapp",
-			fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
-			overwrite: false,
-			useNotificationBar: true,
-			startToast: "Starting download...",
-			endToast: "Download end!",
-			ticker: "Downloading...",
-			notificationTitle: "hello.txt",
-			cancelToast: "Download canceled!"
-		},
-		function(info) {
-			console.info("id:          "+info.id+"\n" +
-						 "downloading: "+info.downloading+"\n" +
-						 "total:       "+info.total+"\n" +
-						 "file:        "+info.file+"\n" +
-						 "dir:         "+info.dir+"\n" +
-						 "progress:    "+info.progress+"\n"
-						);
-			// progress bar example:
-			$('#progress_bar').css('width', info.progress);
-		},
-		function(error) {
-			alert(error);
-		}
-	);
-</code>
+`
+    downloadmanager(
+        "start",
+	{
+	    url: "http://wherever.com/lalalala/.txt",
+	    filePath: "from_myapp",
+	    fileName: "hello.txt", // (FileSystem)/Download/from_myappp/hello.txt
+	    overwrite: false,
+	    useNotificationBar: true,
+	    startToast: "Starting download...",
+	    endToast: "Download end!",
+	    ticker: "Downloading...",
+	    notificationTitle: "hello.txt",
+	    cancelToast: "Download canceled!"
+        },
+	function(info) {
+	    console.info("id:          "+info.id+"\n" +
+	                 "downloading: "+info.downloading+"\n" +
+			 "total:       "+info.total+"\n" +
+			 "file:        "+info.file+"\n" +
+			 "dir:         "+info.dir+"\n" +
+			 "progress:    "+info.progress+"\n"
+			);
+            // progress bar example:
+	    $('#progress_bar').css('width', info.progress);
+	},
+	function(error) {
+	    alert(error);
+	}
+    );
+`
 
 ## Based on ##
 
